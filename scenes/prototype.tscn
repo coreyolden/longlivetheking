@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://c1pb51x2isjpk"]
+
+[ext_resource type="PackedScene" uid="uid://dx0utvyrku0nl" path="res://scenes/player.tscn" id="1_ixygg"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8mxgd"]
+size = Vector3(100, 1, 100)
+
+[sub_resource type="BoxMesh" id="BoxMesh_hkmua"]
+size = Vector3(100, 1, 100)
+
+[sub_resource type="BoxMesh" id="BoxMesh_8mxgd"]
+size = Vector3(50, 1, 50)
+
+[node name="Prototype" type="Node3D" unique_id=2067975480]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1244227622]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+shadow_enabled = true
+
+[node name="Player" parent="." unique_id=600799528 instance=ExtResource("1_ixygg")]
+collision_layer = 2
+
+[node name="Ground" type="StaticBody3D" parent="." unique_id=950334247]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3, 0)
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground" unique_id=2146300037]
+shape = SubResource("BoxShape3D_8mxgd")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Ground" unique_id=228396533]
+mesh = SubResource("BoxMesh_hkmua")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1783573270]
+transform = Transform3D(0.9999919, 0, -0.0040202704, 0, 1, 0, 0.0040202704, 0, 0.9999919, 0, 25.714443, 67.2049)
+
+[node name="Ceiling" type="StaticBody3D" parent="." unique_id=754944171]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 11.951641, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Ceiling" unique_id=949829553]
+mesh = SubResource("BoxMesh_8mxgd")
