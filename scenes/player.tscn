@@ -46,10 +46,12 @@ radius = 1.0
 height = 3.472168
 
 [node name="Player" type="CharacterBody3D" unique_id=600799528]
+collision_layer = 2
 script = ExtResource("1_3vyb7")
 
 [node name="polySurface1" type="MeshInstance3D" parent="." unique_id=144825950]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 0)
+visible = false
 mesh = SubResource("ArrayMesh_waqig")
 metadata/extras = {
 "currentUVSet": "map1"
@@ -59,5 +61,6 @@ metadata/extras = {
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.736084, 0)
 shape = SubResource("CapsuleShape3D_hkmua")
 
-[node name="Camera3D" type="Camera3D" parent="." unique_id=158466492]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.8557365)
+[node name="Pivot" type="Node3D" parent="." unique_id=2048063788]
+
+[node name="Camera3D" type="Camera3D" parent="Pivot" unique_id=158466492]

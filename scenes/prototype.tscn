@@ -11,6 +11,9 @@ size = Vector3(100, 1, 100)
 [sub_resource type="BoxMesh" id="BoxMesh_8mxgd"]
 size = Vector3(50, 1, 50)
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hkmua"]
+albedo_color = Color(0.88246745, 0.55347943, 0.51618993, 1)
+
 [node name="Prototype" type="Node3D" unique_id=2067975480]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1244227622]
@@ -18,7 +21,6 @@ transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545
 shadow_enabled = true
 
 [node name="Player" parent="." unique_id=600799528 instance=ExtResource("1_ixygg")]
-collision_layer = 2
 
 [node name="Ground" type="StaticBody3D" parent="." unique_id=950334247]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3, 0)
@@ -35,3 +37,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 11.951641, 0)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Ceiling" unique_id=949829553]
 mesh = SubResource("BoxMesh_8mxgd")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=2021423110]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.787, 0.67116594, 18.745)
+use_collision = true
+collision_mask = 2
+size = Vector3(8.574707, 6.087036, 5.2159424)
+material = SubResource("StandardMaterial3D_hkmua")
