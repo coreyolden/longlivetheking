@@ -49,6 +49,7 @@ height = 3.472168
 script = ExtResource("1_3vyb7")
 
 [node name="polySurface1" type="MeshInstance3D" parent="." unique_id=144825950]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 0)
 mesh = SubResource("ArrayMesh_waqig")
 metadata/extras = {
 "currentUVSet": "map1"
@@ -57,3 +58,6 @@ metadata/extras = {
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1263158551]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.736084, 0)
 shape = SubResource("CapsuleShape3D_hkmua")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=158466492]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.8557365)
